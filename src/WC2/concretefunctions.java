@@ -4,11 +4,17 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.sun.xml.internal.messaging.saaj.soap.StringDataContentHandler;
+
 public class concretefunctions {
 	static String path;
+	private static InputStream flie;
+	private static Pattern codelPattern;
 	
 	
 	
@@ -73,4 +79,11 @@ public class concretefunctions {
 		return wordnum;
 		
 	}
+	
+	
+	
+	
 }
+	
+	
+	

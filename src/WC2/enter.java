@@ -21,24 +21,17 @@ public class enter {
 		star();
 		}
 	else {
-		System.out.println("请选择功能：-c -l -w");
+		System.out.println("请选择功能：-c -l -w ");
 		Scanner sc = new Scanner(System.in); 
 		String str =sc.nextLine();
+		String[] split = str.split("");
+	
 		switch (str) {
+		
 		case "-c":
 			concretefunctions c1 =new concretefunctions();
 			c1.getcodenum(file);
 			System.out.println("字符数："+c1.getcodenum(file));
-			break;
-		case "-w":
-			concretefunctions c3 =new concretefunctions();
-			try {
-				c3.getwordnum(file);
-				System.out.println("单词数："+c3.getwordnum(file));
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 			break;
 		case "-l":
 			concretefunctions c2 =new concretefunctions();
@@ -50,8 +43,17 @@ public class enter {
 				e.printStackTrace();
 			}
 			break;
-		
-
+			case "-w":
+			concretefunctions c3 =new concretefunctions();
+			try {
+				c3.getwordnum(file);
+				System.out.println("单词数："+c3.getwordnum(file));
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			break;
+			
 		default:System.out.println("输入有误");
 		star();
 			break;
